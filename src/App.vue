@@ -1,17 +1,10 @@
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png" />-->
-<!--  <HelloWorld msg="Hello Vue 3.0 + Vite" />-->
-  <router-link to="/HelloWorld">Frank</router-link>
   <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
