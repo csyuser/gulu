@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c09fefd2-b495-4745-ae6a-50bb188d10aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/test1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/test2.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +55,34 @@
       <workItem from="1626182424584" duration="3365000" />
       <workItem from="1626767726306" duration="3847000" />
       <workItem from="1626772393308" duration="2819000" />
-      <workItem from="1627295176757" duration="966000" />
+      <workItem from="1627295176757" duration="4342000" />
     </task>
+    <task id="LOCAL-00001" summary="创建 doc文件，删除多余的文件">
+      <created>1627296171239</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627296171239</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建 doc文件，删除多余的文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建 doc文件，删除多余的文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627296123406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1627296123406" />
+    <state x="560" y="65" key="CommitChangelistDialog2" timestamp="1627296170016">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="65" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1627296170016" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1626183433176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
