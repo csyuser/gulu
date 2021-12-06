@@ -30,6 +30,12 @@ button {
   border-radius: $h / 2;
   background: #dcdfe6;
   position: relative;
+  cursor: pointer;
+  &:active{
+    >span{
+      width: calc( #{$h2} + 4px);
+    }
+  }
   > span{
     position: absolute;
     display: inline-block;
@@ -46,6 +52,12 @@ button {
     background: #409eff;
     > span {
       left: calc(100% - #{$h2} - 2px);
+    }
+    &:active{
+      >span{
+        width: calc( #{$h2} + 4px);
+        margin-left: -4px;
+      }
     }
   }
 }
