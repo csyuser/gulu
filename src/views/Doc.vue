@@ -41,6 +41,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+@import "src/assets/style/helper.scss";
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -61,6 +63,7 @@ export default {
   display: flex;
   > aside {
     flex-shrink: 0;
+    box-shadow: 1px 0 3px rgba(0,0,0,0.3);
   }
   > main {
     flex-grow: 1;
@@ -69,13 +72,14 @@ export default {
   }
 }
 aside {
-  background: lightblue;
+  background: $mainColor;
   width: 150px;
   padding: 70px 16px 16px;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
+  color: #ffffff;
   > h2 {
     margin-bottom: 4px;
   }

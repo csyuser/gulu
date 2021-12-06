@@ -20,8 +20,9 @@ export default {
   components: {TopNav}
 }
 </script>
-
 <style scoped lang='scss'>
+@import "src/assets/style/helper.scss";
+
 .banner {
   padding: 100px 0;
   display: flex;
@@ -33,7 +34,7 @@ export default {
     padding: 8px 0;
     a {
       margin:0 8px;
-      background: #00bcd4;
+      background: $mainColor;
       display: inline-block;
       $h: 28px;
       height: $h;

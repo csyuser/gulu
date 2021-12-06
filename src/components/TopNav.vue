@@ -32,8 +32,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+@import "src/assets/style/helper.scss";
 .topNav {
-  background: #0097a7;
+  background: $bannerColor;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -44,6 +45,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
 
   > .logo {
     max-width: 6em;
@@ -63,12 +65,13 @@ export default {
   > .toggleAside {
     width: 24px;
     height: 24px;
-    background: red;
+    background: $mainColor;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
   }
 
   @media (max-width: 500px) {
