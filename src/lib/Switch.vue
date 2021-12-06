@@ -39,7 +39,7 @@ button {
     left: 2px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all 0.3s;
+    transition: all 250ms;
   }
   &.checked {
     background: #409eff;
