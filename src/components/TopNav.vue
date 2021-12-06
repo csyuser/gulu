@@ -1,6 +1,6 @@
 <template>
   <div class="topNav">
-    <div class="logo" @click="$router.push('/')">logo</div>
+    <h3 class="logo" @click="$router.push('/')">logo</h3>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>

@@ -52,8 +52,8 @@ export default {
   }
   > .doc {
     flex-grow: 1;
-    padding-top: 60px;
-    padding-left: 156px;
+    padding-top: 54px;
+    padding-left: 150px;
     @media (max-width: 500px) {
       padding-left: 0;
     }
