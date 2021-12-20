@@ -3,12 +3,14 @@
     <span>正常状态：</span>
     <Switch v-model:value="value"></Switch>
   </section>
-  <br/>
   <section>
     <span>禁用状态：</span>
     <Switch v-model:value="value2" disabled></Switch>
   </section>
-
+  <section>
+    <span>自定义颜色：</span>
+    <Switch v-model:value="value3" active-color="green" inactive-color="red"></Switch>
+  </section>
 </template>
 
 <script>
@@ -21,7 +23,8 @@ export default {
   setup() {
     const value = ref(true)
     const value2 = ref(false)
-    return {value, value2}
+    const value3 = ref(false)
+    return {value, value2,value3}
   }
 }
 </script>

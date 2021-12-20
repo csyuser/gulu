@@ -1,5 +1,5 @@
 <template>
-  <button :class="{checked:value,disabled}" @click="toggle" :disabled="disabled">
+  <button :class="{checked:value,disabled}" :style="style" @click="toggle" :disabled="disabled">
     <span></span>
   </button>
 </template>
@@ -10,7 +10,16 @@ export default {
   name: 'Switch',
   props:{
     value:{type:Boolean},  //switch初始值
-    disabled:{type:Boolean,default:false}  //switch是否禁用
+    disabled:{type:Boolean,default:false},  //switch是否禁用
+    activeColor:{type:String,default:'#409eff'},  //switch 打开时的背景色,默认#409eff
+    inactiveColor:{type:String,default:'#dcdfe6'},  //switch 关闭时的背景色,默认#dcdfe6
+  },
+  computed:{
+    style(){
+      return{
+        background:this.value?this.activeColor:this.inactiveColor
+      }
+    }
   },
   setup(props,context){
     const toggle = ()=>{
@@ -50,7 +59,7 @@ button {
     transition: all 250ms;
   }
   &.checked {
-    background: #409eff;
+    //background: #409eff;
     > span {
       left: calc(100% - #{$h2} - 2px);
     }
