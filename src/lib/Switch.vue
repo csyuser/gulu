@@ -1,5 +1,5 @@
 <template>
-  <button :class="{checked:value}" @click="toggle">
+  <button :class="{checked:value,disabled}" @click="toggle" :disabled="disabled">
     <span></span>
   </button>
 </template>
@@ -9,7 +9,8 @@
 export default {
   name: 'Switch',
   props:{
-    value:{type:Boolean}
+    value:{type:Boolean},  //switch初始值
+    disabled:{type:Boolean,default:false}  //switch是否禁用
   },
   setup(props,context){
     const toggle = ()=>{
@@ -57,6 +58,15 @@ button {
       >span{
         width: calc( #{$h2} + 4px);
         margin-left: -4px;
+      }
+    }
+  }
+  &:disabled:hover{
+    cursor: not-allowed;
+    &:active{
+      >span{
+        width: $h2;
+        margin-left: 0;
       }
     }
   }
