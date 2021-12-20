@@ -34,7 +34,7 @@ export default {
 <style scoped lang='scss'>
 @import "src/assets/style/helper.scss";
 .topNav {
-  background: $bannerColor;
+  background: $mainColor;
   display: flex;
   padding: 16px;
   position: fixed;
