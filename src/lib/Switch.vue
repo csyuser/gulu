@@ -1,10 +1,11 @@
 <template>
-  <button :class="{checked:value,disabled}" :style="style" @click="toggle" :disabled="disabled">
-    <span></span>
+  <button class="pipi-switch" :class="{'pipi-checked':value,disabled}" :style="style" @click="toggle" :disabled="disabled">
+    <span class="pipi-circle"></span>
   </button>
 </template>
 
 <script lang="ts">
+import {computed} from 'vue'
 
 export default {
   name: 'Switch',
@@ -14,18 +15,16 @@ export default {
     activeColor:{type:String,default:'#409eff'},  //switch 打开时的背景色,默认#409eff
     inactiveColor:{type:String,default:'#dcdfe6'},  //switch 关闭时的背景色,默认#dcdfe6
   },
-  computed:{
-    style(){
-      return{
-        background:this.value?this.activeColor:this.inactiveColor
-      }
-    }
-  },
   setup(props,context){
     const toggle = ()=>{
       context.emit('update:value',!props.value)
     }
-    return {toggle}
+    const style = computed(()=>{
+      return{
+        background:props.value?props.activeColor:props.inactiveColor
+      }
+    })
+    return {toggle,style}
   }
 };
 </script>
@@ -33,7 +32,7 @@ export default {
 <style scoped lang='scss'>
 $h: 22px;
 $h2: $h - 4px;
-button {
+.pipi-switch {
   height: $h;
   width: $h * 2;
   border: none;
@@ -42,11 +41,11 @@ button {
   position: relative;
   cursor: pointer;
   &:active{
-    >span{
+    > .pipi-circle{
       width: calc( #{$h2} + 4px);
     }
   }
-  > span{
+  > .pipi-circle{
     position: absolute;
     display: inline-block;
     height: $h2;
@@ -58,7 +57,7 @@ button {
     transform: translateY(-50%);
     transition: all 250ms;
   }
-  &.checked {
+  &.pipi-checked {
     //background: #409eff;
     > span {
       left: calc(100% - #{$h2} - 2px);
@@ -73,7 +72,7 @@ button {
   &:disabled:hover{
     cursor: not-allowed;
     &:active{
-      >span{
+      > .pipi-circle{
         width: $h2;
         margin-left: 0;
       }
