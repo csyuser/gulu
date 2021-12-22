@@ -14,3 +14,6 @@
 button:focus{  //电脑端
   outline: none;
 }
+button::-moz-focus-inner {  //适配火狐浏览器
+  border: 0;
+}
