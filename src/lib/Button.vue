@@ -11,11 +11,12 @@ export default {
   name: 'Button',
   props:{
     theme:{type:String},
+    size:{type:String},
   },
   setup(props) {
-    const {theme} = props
+    const {theme,size} = props
     const classes = computed(() => {
-      return {[`pipi-theme-${theme}`]:theme};
+      return {[`pipi-theme-${theme}`]:theme,[`pipi-size-${size}`]:size};
     });
     return{classes}
   }
@@ -31,7 +32,7 @@ $radius: 4px;
 
 .pipi-button {
   height: $h;
-  padding: 0 12px;
+  padding: 8px 12px;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -69,6 +70,16 @@ $radius: 4px;
     &:hover,&:focus{
       color: lighten($blue,10%);
     }
+  }
+  &.pipi-size-big{
+    font-size: 24px;
+    height: 40px;
+    padding: 8px 14px;
+  }
+  &.pipi-size-small{
+    font-size: 14px;
+    height: 28px;
+    padding: 8px;
   }
 }
 </style>

@@ -6,6 +6,13 @@
     <Button theme="text">文字按钮</Button>
     <Button theme="link">链接</Button>
   </section>
+  <section>
+    <span>不同的size：</span>
+    <Button size="big">大号按钮</Button>
+    <Button>默认按钮</Button>
+    <Button size="medium">中号按钮</Button>
+    <Button size="small">小号按钮</Button>
+  </section>
 </template>
 
 <script>
@@ -30,5 +37,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
+section {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
 </style>
