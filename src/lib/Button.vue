@@ -1,5 +1,5 @@
 <template>
-  <button class="pipi-button" :class="classes">
+  <button class="pipi-button" :class="classes" :disabled="disabled">
     <span class="pipi-button-inner-span">
           <slot></slot>
     </span>
@@ -15,6 +15,7 @@ export default {
     theme:{type:String},
     size:{type:String},
     level:{type:String},
+    disabled:{type:Boolean},
   },
   setup(props) {
     const {theme,size,level} = props
@@ -34,6 +35,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $yellow: #ebb563;
+$grey:grey;
 
 .pipi-button {
   //height: $h;
@@ -60,6 +62,15 @@ $yellow: #ebb563;
     color: $blue;
     border-color: $blue;
   }
+  &[disabled]{
+    cursor: not-allowed;
+    color: #c0cfe3;
+    border-color: #c0cfe3;
+    &:hover, &:focus {
+      color: #c0cfe3;
+      border-color: #c0cfe3;
+    }
+  }
   &:focus {
     outline: none;
   }
@@ -85,6 +96,13 @@ $yellow: #ebb563;
     &:hover, &:focus{
       background: lighten($blue,10%);
     }
+    &[disabled]{
+      background: lighten($blue,10%);
+      border: 1px solid lighten($blue,10%);
+      &:hover, &:focus{
+        color: #ffffff;
+      }
+    }
   }
   &.pipi-level-warn{
     background: $yellow;
@@ -93,6 +111,13 @@ $yellow: #ebb563;
     &:hover, &:focus{
       background: lighten($yellow,10%);
     }
+    &[disabled]{
+      background: lighten($yellow,10%);
+      border: 1px solid lighten($yellow,10%);
+      &:hover, &:focus{
+        color: #ffffff;
+      }
+    }
   }
   &.pipi-level-danger{
     background: $red;
@@ -100,6 +125,13 @@ $yellow: #ebb563;
     color: #ffffff;
     &:hover, &:focus{
       background: lighten($red,10%);
+    }
+    &[disabled]{
+      background: lighten($red,10%);
+      border: 1px solid lighten($red,10%);
+      &:hover, &:focus{
+        color: #ffffff;
+      }
     }
   }
   &.pipi-theme-text{
@@ -118,6 +150,11 @@ $yellow: #ebb563;
       &:hover, &:focus {
         background:transparent;
         color: darken($red, 10%);
+      }
+    }
+    &[disabled]{
+      &:hover, &:focus {
+        border-color: transparent;
       }
     }
 
@@ -144,6 +181,12 @@ $yellow: #ebb563;
         color: darken($red, 10%);
       }
     }
+    &[disabled]{
+      &:hover, &:focus {
+        border-color: transparent;
+      }
+    }
   }
+
 }
 </style>
