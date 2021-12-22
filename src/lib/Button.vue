@@ -51,6 +51,7 @@ $yellow: #ebb563;
   transition: all 250ms;
   > .pipi-button-inner-span{
     line-height:1;
+    background: transparent;
   }
   & + & {
     margin-left: 8px;
@@ -64,20 +65,6 @@ $yellow: #ebb563;
   }
   &::-moz-focus-inner {
     border: 0;
-  }
-  &.pipi-theme-text{
-    background: transparent;
-    border-color: transparent;
-    box-shadow: none;
-  }
-  &.pipi-theme-link{
-    background: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    color: $blue;
-    &:hover,&:focus{
-      color: lighten($blue,10%);
-    }
   }
   &.pipi-size-big{
     padding: 8px 14px;
@@ -95,7 +82,7 @@ $yellow: #ebb563;
     background: $blue;
     color: #ffffff;
     border: 1px solid $blue;
-    &:hover{
+    &:hover, &:focus{
       background: lighten($blue,10%);
     }
   }
@@ -103,7 +90,7 @@ $yellow: #ebb563;
     background: $yellow;
     color: #ffffff;
     border: 1px solid $yellow;
-    &:hover{
+    &:hover, &:focus{
       background: lighten($yellow,10%);
     }
   }
@@ -111,8 +98,51 @@ $yellow: #ebb563;
     background: $red;
     border: 1px solid $red;
     color: #ffffff;
-    &:hover{
+    &:hover, &:focus{
       background: lighten($red,10%);
+    }
+  }
+  &.pipi-theme-text{
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    &.pipi-level-warn {
+      color: $yellow;
+      &:hover, &:focus {
+        background:transparent;
+        color: darken($yellow, 10%);
+      }
+    }
+    &.pipi-level-danger {
+      color: $red;
+      &:hover, &:focus {
+        background:transparent;
+        color: darken($red, 10%);
+      }
+    }
+
+  }
+  &.pipi-theme-link{
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,&:focus{
+      color: lighten($blue,10%);
+    }
+    &.pipi-level-warn {
+      color: $yellow;
+      &:hover, &:focus {
+        background:transparent;
+        color: darken($yellow, 10%);
+      }
+    }
+    &.pipi-level-danger {
+      color: $red;
+      &:hover, &:focus {
+        background:transparent;
+        color: darken($red, 10%);
+      }
     }
   }
 }
