@@ -13,6 +13,13 @@
     <Button size="medium">中号按钮</Button>
     <Button size="small">小号按钮</Button>
   </section>
+  <section>
+    <span>不同的level：</span>
+    <Button>普通按钮</Button>
+    <Button level="primary">主要按钮</Button>
+    <Button level="warn">警告按钮</Button>
+    <Button level="danger">危险按钮</Button>
+  </section>
 </template>
 
 <script>

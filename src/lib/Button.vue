@@ -1,6 +1,8 @@
 <template>
   <button class="pipi-button" :class="classes">
-    <slot></slot>
+    <span class="pipi-button-inner-span">
+          <slot></slot>
+    </span>
   </button>
 </template>
 
@@ -12,11 +14,12 @@ export default {
   props:{
     theme:{type:String},
     size:{type:String},
+    level:{type:String},
   },
   setup(props) {
-    const {theme,size} = props
+    const {theme,size,level} = props
     const classes = computed(() => {
-      return {[`pipi-theme-${theme}`]:theme,[`pipi-size-${size}`]:size};
+      return {[`pipi-theme-${theme}`]:theme,[`pipi-size-${size}`]:size,[`pipi-level-${level}`]:level};
     });
     return{classes}
   }
@@ -24,14 +27,16 @@ export default {
 </script>
 
 <style lang='scss'>
-$h: 32px;
+//$h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
+$red: red;
+$yellow: #ebb563;
 
 .pipi-button {
-  height: $h;
+  //height: $h;
   padding: 8px 12px;
   cursor: pointer;
   display: inline-flex;
@@ -44,6 +49,9 @@ $radius: 4px;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: all 250ms;
+  > .pipi-button-inner-span{
+    line-height:1;
+  }
   & + & {
     margin-left: 8px;
   }
@@ -72,14 +80,40 @@ $radius: 4px;
     }
   }
   &.pipi-size-big{
-    font-size: 24px;
-    height: 40px;
     padding: 8px 14px;
+    > .pipi-button-inner-span{
+      font-size: 24px;
+    }
   }
   &.pipi-size-small{
-    font-size: 14px;
-    height: 28px;
-    padding: 8px;
+    padding: 6px;
+    > .pipi-button-inner-span{
+      font-size: 12px;
+    }
+  }
+  &.pipi-level-primary{
+    background: $blue;
+    color: #ffffff;
+    border: 1px solid $blue;
+    &:hover{
+      background: lighten($blue,10%);
+    }
+  }
+  &.pipi-level-warn{
+    background: $yellow;
+    color: #ffffff;
+    border: 1px solid $yellow;
+    &:hover{
+      background: lighten($yellow,10%);
+    }
+  }
+  &.pipi-level-danger{
+    background: $red;
+    border: 1px solid $red;
+    color: #ffffff;
+    &:hover{
+      background: lighten($red,10%);
+    }
   }
 }
 </style>
