@@ -2,8 +2,9 @@
   <section>
     <span>不同的theme：</span>
     <Button>普通按钮</Button>
-    <Button>文字按钮</Button>
-    <Button>链接</Button>
+    <Button theme="button">普通按钮</Button>
+    <Button theme="text">文字按钮</Button>
+    <Button theme="link">链接</Button>
   </section>
 </template>
 

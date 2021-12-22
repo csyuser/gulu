@@ -1,5 +1,5 @@
 <template>
-  <button class="pipi-button">
+  <button class="pipi-button" :class="classes">
     <slot></slot>
   </button>
 </template>
@@ -9,8 +9,15 @@ import {computed} from 'vue';
 
 export default {
   name: 'Button',
-  setup() {
-
+  props:{
+    theme:{type:String},
+  },
+  setup(props) {
+    const {theme} = props
+    const classes = computed(() => {
+      return {[`pipi-theme-${theme}`]:theme};
+    });
+    return{classes}
   }
 };
 </script>
@@ -39,8 +46,7 @@ $radius: 4px;
   & + & {
     margin-left: 8px;
   }
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     color: $blue;
     border-color: $blue;
   }
@@ -49,6 +55,20 @@ $radius: 4px;
   }
   &::-moz-focus-inner {
     border: 0;
+  }
+  &.pipi-theme-text{
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+  &.pipi-theme-link{
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,&:focus{
+      color: lighten($blue,10%);
+    }
   }
 }
 </style>
