@@ -1,7 +1,8 @@
 <template>
   <button class="pipi-button" :class="classes" :disabled="disabled">
+    <span class="pipi-loading-indicator" v-if="loading"></span>
     <span class="pipi-button-inner-span">
-          <slot></slot>
+          <slot/>
     </span>
   </button>
 </template>
@@ -16,6 +17,7 @@ export default {
     size:{type:String},
     level:{type:String},
     disabled:{type:Boolean},
+    loading:{type:Boolean},
   },
   setup(props) {
     const {theme,size,level} = props
@@ -51,9 +53,24 @@ $grey:grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: all 250ms;
+  > .pipi-loading-indicator{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: $blue $blue $blue transparent;
+    animation: pipi-spin 1s infinite linear;
+  }
   > .pipi-button-inner-span{
     line-height:1;
     background: transparent;
+  }
+  @keyframes pipi-spin {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
   }
   & + & {
     margin-left: 8px;

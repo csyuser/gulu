@@ -29,6 +29,10 @@
     <Button level="warn" disabled>警告按钮</Button>
     <Button theme="text" disabled>文字按钮</Button>
   </section>
+  <section>
+    <span>loading：</span>
+    <Button loading>加载中</Button>
+  </section>
 </template>
 
 <script>
