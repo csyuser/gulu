@@ -1,6 +1,6 @@
 <template>
   <Button level="primary" @click="toggle">点击显示dialog</Button>
-  <Dialog :visible="visible"></Dialog>
+  <Dialog v-model:visible="visible"></Dialog>
 </template>
 
 <script lang="ts">

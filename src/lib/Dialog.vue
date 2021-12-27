@@ -3,7 +3,7 @@
     <div class="pipi-dialog-overlay"></div>
     <div class="pipi-dialog-wrapper">
       <div class="pipi-dialog">
-        <header>标题 <span class="pipi-dialog-close"></span></header>
+        <header>标题 <span class="pipi-dialog-close" @click="closeDialog"></span></header>
         <main>
           <p>第一行内容</p>
           <p>第二行内容</p>
@@ -25,7 +25,13 @@ export default {
   components: {Button},
   props: {
     visible: {type: Boolean, default: false}
-  }
+  },
+  setup(props,context){
+    const closeDialog = ()=>{
+      context.emit('update:visible',false)
+    }
+    return {closeDialog}
+  },
 };
 </script>
 
