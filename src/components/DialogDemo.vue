@@ -5,8 +5,8 @@
     <p>这是一个dialog</p>
     <template #footer>
       <span class="pipi-dialog-footer">
-        <Button>取消</Button>
-        <Button level="primary">确定</Button>
+        <Button @click="visible = false">取消</Button>
+        <Button level="primary" @click="ok">确定</Button>
       </span>
     </template>
   </Dialog>
@@ -26,7 +26,11 @@ export default {
     const toggle = () => {
       visible.value = !visible.value;
     };
-    return {visible, toggle};
+    const ok = ()=>{
+      console.log('ok')
+      visible.value = false
+    }
+    return {visible, toggle,ok};
   }
 };
 </script>
