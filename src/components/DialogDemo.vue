@@ -1,6 +1,6 @@
 <template>
   <Button level="primary" @click="toggle">点击显示dialog</Button>
-  <Dialog v-model:visible="visible">
+  <Dialog v-model:visible="visible" :close-on-click-overlay="false">
     <p>你好</p>
     <p>这是一个dialog</p>
     <template #footer>

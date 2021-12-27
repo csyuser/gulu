@@ -1,7 +1,7 @@
 <template>
   <template v-if="visible">
     <div class="pipi-dialog-overlay"></div>
-    <div class="pipi-dialog-wrapper">
+    <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">
       <div class="pipi-dialog">
         <header>标题 <span class="pipi-dialog-close" @click="closeDialog"></span></header>
         <main>
@@ -22,13 +22,20 @@ export default {
   name: 'Dialog',
   components: {Button},
   props: {
-    visible: {type: Boolean, default: false}
+    visible: {type: Boolean, default: false},
+    closeOnClickOverlay:{type:Boolean,default: true}
   },
   setup(props, context) {
+    const {closeOnClickOverlay} = props
     const closeDialog = () => {
       context.emit('update:visible', false);
     };
-    return {closeDialog};
+    const handleClickOverlay = ()=>{
+      if (closeOnClickOverlay){
+        closeDialog()
+      }
+    }
+    return {closeDialog,handleClickOverlay};
   },
 };
 </script>
@@ -64,9 +71,6 @@ $blue: #40a9ff;
     left: 0;
     right: 0;
     bottom: 0;
-    //top: 50%;
-    //left: 50%;
-    //transform: translate(-50%, -50%);
   }
 
   > header {
