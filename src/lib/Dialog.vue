@@ -5,12 +5,10 @@
       <div class="pipi-dialog">
         <header>标题 <span class="pipi-dialog-close" @click="closeDialog"></span></header>
         <main>
-          <p>第一行内容</p>
-          <p>第二行内容</p>
+          <slot></slot>
         </main>
         <footer>
-          <Button>取消</Button>
-          <Button level="primary">确定</Button>
+          <slot name="footer"></slot>
         </footer>
       </div>
     </div>
@@ -26,11 +24,11 @@ export default {
   props: {
     visible: {type: Boolean, default: false}
   },
-  setup(props,context){
-    const closeDialog = ()=>{
-      context.emit('update:visible',false)
-    }
-    return {closeDialog}
+  setup(props, context) {
+    const closeDialog = () => {
+      context.emit('update:visible', false);
+    };
+    return {closeDialog};
   },
 };
 </script>
@@ -46,6 +44,8 @@ $blue: #40a9ff;
   box-shadow: 0 1px 3px fade-out(black, 0.7);
   min-width: 15em;
   max-width: 90%;
+  width: 30%;
+  margin: 15vh auto 50px;
 
   &-overlay {
     width: 100%;
@@ -60,9 +60,13 @@ $blue: #40a9ff;
   &-wrapper {
     position: fixed;
     z-index: 11;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //top: 50%;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
   }
 
   > header {
@@ -110,9 +114,13 @@ $blue: #40a9ff;
   }
 
   > footer {
-    border-top: 1px solid $border-color;
-    padding: 12px 16px;
-    text-align: right;
+    > .pipi-dialog-footer {
+      display: block;
+      padding: 12px 16px;
+      text-align: right;
+      border-top: 1px solid $border-color;
+    }
+
   }
 }
 </style>
