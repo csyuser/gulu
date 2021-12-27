@@ -1,4 +1,4 @@
-<template>
+<template v-if="visible">
   <div class="pipi-dialog-overlay"></div>
   <div class="pipi-dialog-wrapper">
     <div class="pipi-dialog">
@@ -21,6 +21,9 @@ import Button from './Button.vue';
 export default {
   name: 'Dialog',
   components:{Button},
+  props:{
+    visible:{type:Boolean,default:false}
+  }
 };
 </script>
 
