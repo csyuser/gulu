@@ -1,21 +1,21 @@
 <template>
-<!--  <Teleport to="body" v-if="appendToBody">-->
-<!--    <template v-if="visible">-->
-<!--      <div class="pipi-dialog-overlay"></div>-->
-<!--      <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">-->
-<!--        <div class="pipi-dialog" :style="dialogStyle">-->
-<!--          <header>{{ title }} <span class="pipi-dialog-close" @click="closeDialog"></span></header>-->
-<!--          <main>-->
-<!--            <slot></slot>-->
-<!--          </main>-->
-<!--          <footer>-->
-<!--            <slot name="footer"></slot>-->
-<!--          </footer>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </template>-->
-<!--  </Teleport>-->
-  <template v-if="visible">
+  <Teleport to="body" v-if="appendToBody">
+    <template v-if="visible">
+      <div class="pipi-dialog-overlay" style="z-index: 12"></div>
+      <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay" style="z-index: 13">
+        <div class="pipi-dialog" :style="dialogStyle">
+          <header>{{ title }} <span class="pipi-dialog-close" @click="closeDialog"></span></header>
+          <main>
+            <slot></slot>
+          </main>
+          <footer>
+            <slot name="footer"></slot>
+          </footer>
+        </div>
+      </div>
+    </template>
+  </Teleport>
+  <template v-else-if="!appendToBody && visible">
     <div class="pipi-dialog-overlay"></div>
     <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">
       <div class="pipi-dialog" :style="dialogStyle">
