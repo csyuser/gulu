@@ -13,6 +13,10 @@
       </template>
     </Dialog>
   </section>
+  <section>
+    <p>一句话打开dialog：</p>
+    <Button level="primary" @click="showDialog">点击显示dialog</Button>
+  </section>
 <!--  <section>-->
 <!--    <p>嵌套的dialog：</p>-->
 <!--    <Button level="primary" @click="outerVisible = true">点击显示dialog</Button>-->
@@ -41,17 +45,18 @@
 
 
 <script lang="ts">
-import {ref} from 'vue';
+import {ref,h} from 'vue';
 import Dialog from '../lib/Dialog.vue';
 import Button from '../lib/Button.vue';
+import {openDialog} from '../lib/openDialog'
 
 export default {
   name: 'DialogDemo',
   components: {Dialog, Button},
   setup() {
     const visible = ref(false);
-    const outerVisible = ref(false);
-    const innerVisible = ref(false);
+    // const outerVisible = ref(false);
+    // const innerVisible = ref(false);
     const toggle = () => {
       visible.value = !visible.value;
     };
@@ -59,7 +64,13 @@ export default {
       console.log('ok');
       visible.value = false;
     };
-    return {visible, toggle, ok,outerVisible,innerVisible};
+    const showDialog = ()=>{
+      openDialog({
+        title:'剧情歌',
+        content:h('p',{},'剧情歌是新兴的一种歌曲，它介于歌曲与小说之间，一个剧情歌即是一首歌曲又是一个短篇故事'),
+      })
+    }
+    return {visible, toggle, ok,showDialog};
   }
 };
 </script>
