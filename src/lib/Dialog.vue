@@ -1,4 +1,20 @@
 <template>
+<!--  <Teleport to="body" v-if="appendToBody">-->
+<!--    <template v-if="visible">-->
+<!--      <div class="pipi-dialog-overlay"></div>-->
+<!--      <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">-->
+<!--        <div class="pipi-dialog" :style="dialogStyle">-->
+<!--          <header>{{ title }} <span class="pipi-dialog-close" @click="closeDialog"></span></header>-->
+<!--          <main>-->
+<!--            <slot></slot>-->
+<!--          </main>-->
+<!--          <footer>-->
+<!--            <slot name="footer"></slot>-->
+<!--          </footer>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </template>-->
+<!--  </Teleport>-->
   <template v-if="visible">
     <div class="pipi-dialog-overlay"></div>
     <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">
@@ -23,30 +39,31 @@ export default {
   name: 'Dialog',
   components: {Button},
   props: {
-    title:{type:String,default:'提示'},  //弹窗的标题，String，默认“提示”
+    title: {type: String, default: '提示'},  //弹窗的标题，String，默认“提示”
     visible: {type: Boolean, default: false},  //控制弹窗显示，Boolean，默认false
-    closeOnClickOverlay:{type:Boolean,default: true},  //是否点击遮罩关闭弹窗，Boolean，true
-    top:{type:String},  //弹窗距离顶部的距离，String，没有默认值，但是若未传的话，top为15vh
-    width:{type:String},  //弹窗的宽度，String，没有默认值，但是若未传的话，width为30%
+    closeOnClickOverlay: {type: Boolean, default: true},  //是否点击遮罩关闭弹窗，Boolean，true
+    top: {type: String},  //弹窗距离顶部的距离，String，没有默认值，但是若未传的话，top为15vh
+    width: {type: String},  //弹窗的宽度，String，没有默认值，但是若未传的话，width为30%
+    appendToBody: {type: Boolean, default: false},  //是否挂在到body上，一般用于嵌套的dialog中的inner dialog，Boolean，默认是false
   },
   setup(props, context) {
-    const {closeOnClickOverlay,top,width} = props
+    const {closeOnClickOverlay, top, width} = props;
     const closeDialog = () => {
       context.emit('update:visible', false);
     };
-    const handleClickOverlay = ()=>{
-      if (closeOnClickOverlay){
-        closeDialog()
+    const handleClickOverlay = () => {
+      if (closeOnClickOverlay) {
+        closeDialog();
       }
-    }
-    const dialogStyle = computed(()=>{
+    };
+    const dialogStyle = computed(() => {
 
       return {
         width,
-        marginTop:top
-      }
-    })
-    return {closeDialog,handleClickOverlay,dialogStyle};
+        marginTop: top
+      };
+    });
+    return {closeDialog, handleClickOverlay, dialogStyle};
   },
 };
 </script>
