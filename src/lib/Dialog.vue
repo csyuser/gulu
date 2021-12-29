@@ -3,7 +3,7 @@
     <div class="pipi-dialog-overlay"></div>
     <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">
       <div class="pipi-dialog">
-        <header>标题 <span class="pipi-dialog-close" @click="closeDialog"></span></header>
+        <header>{{ title }} <span class="pipi-dialog-close" @click="closeDialog"></span></header>
         <main>
           <slot></slot>
         </main>
@@ -22,8 +22,9 @@ export default {
   name: 'Dialog',
   components: {Button},
   props: {
-    visible: {type: Boolean, default: false},
-    closeOnClickOverlay:{type:Boolean,default: true}
+    title:{type:String,default:'提示'},  //弹窗的标题，String，默认“提示”
+    visible: {type: Boolean, default: false},  //控制弹窗显示，Boolean，默认false
+    closeOnClickOverlay:{type:Boolean,default: true}  //是否点击遮罩关闭弹窗，Boolean，true
   },
   setup(props, context) {
     const {closeOnClickOverlay} = props
@@ -79,6 +80,7 @@ $blue: #40a9ff;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 18px;
 
     > .pipi-dialog-close {
       display: inline-block;
