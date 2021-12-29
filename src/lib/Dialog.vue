@@ -2,7 +2,7 @@
   <template v-if="visible">
     <div class="pipi-dialog-overlay"></div>
     <div class="pipi-dialog-wrapper" @click.self="handleClickOverlay">
-      <div class="pipi-dialog">
+      <div class="pipi-dialog" :style="dialogStyle">
         <header>{{ title }} <span class="pipi-dialog-close" @click="closeDialog"></span></header>
         <main>
           <slot></slot>
@@ -16,6 +16,7 @@
 </template>
 
 <script lang="ts">
+import {computed} from 'vue';
 import Button from './Button.vue';
 
 export default {
@@ -24,10 +25,12 @@ export default {
   props: {
     title:{type:String,default:'提示'},  //弹窗的标题，String，默认“提示”
     visible: {type: Boolean, default: false},  //控制弹窗显示，Boolean，默认false
-    closeOnClickOverlay:{type:Boolean,default: true}  //是否点击遮罩关闭弹窗，Boolean，true
+    closeOnClickOverlay:{type:Boolean,default: true},  //是否点击遮罩关闭弹窗，Boolean，true
+    top:{type:String},  //弹窗距离顶部的距离，String，没有默认值，但是若未传的话，top为15vh
+    width:{type:String},  //弹窗的宽度，String，没有默认值，但是若未传的话，width为30%
   },
   setup(props, context) {
-    const {closeOnClickOverlay} = props
+    const {closeOnClickOverlay,top,width} = props
     const closeDialog = () => {
       context.emit('update:visible', false);
     };
@@ -36,7 +39,14 @@ export default {
         closeDialog()
       }
     }
-    return {closeDialog,handleClickOverlay};
+    const dialogStyle = computed(()=>{
+
+      return {
+        width,
+        marginTop:top
+      }
+    })
+    return {closeDialog,handleClickOverlay,dialogStyle};
   },
 };
 </script>
@@ -51,7 +61,7 @@ $blue: #40a9ff;
   border-radius: $radius;
   box-shadow: 0 1px 3px fade-out(black, 0.7);
   min-width: 15em;
-  max-width: 90%;
+  max-width: 100%;
   width: 30%;
   margin: 15vh auto 50px;
 
