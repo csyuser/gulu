@@ -32,8 +32,10 @@
       </template>
     </Dialog>
     <Dialog v-model:visible="innerVisible" :close-on-click-overlay="false" title="名字自己起" append-to-body>
-      <p>祎</p>
-      <p>这个字念[yī]，美好的意思 </p>
+      <p>Array.prototype.forEach()</p>
+      <p>不会改变原数组，除非你在回调函数里面更改原数组</p>
+      <p>除了抛出异常，否则没有办法跳出或者终止循环</p>
+      <p>不会对未初始化的值进行任何操作（当它不存在）</p>
       <template #footer>
       <span class="pipi-dialog-footer">
         <Button level="primary" @click="innerVisible = false">关闭</Button>
@@ -80,5 +82,8 @@ section {
   display: flex;
   align-items: center;
   margin-top: 16px;
+  p{
+    line-height: 1.5;
+  }
 }
 </style>
