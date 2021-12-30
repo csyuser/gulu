@@ -15,7 +15,7 @@
             <router-link to="/DialogDemo">Dialog 组件</router-link>
           </li>
           <li>
-            <router-link to="/Tabs">Tabs 组件</router-link>
+            <router-link to="/TabsDemo">Tabs 组件</router-link>
           </li>
         </ol>
       </aside>

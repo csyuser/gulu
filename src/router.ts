@@ -21,9 +21,9 @@ export const router = createRouter({
           name: 'SwitchDemo',
           component: () => import('./components/SwitchDemo.vue')
         },{
-          path: '/Tabs',
-          name: 'Tabs',
-          component: () => import('./components/Tabs.vue')
+          path: '/TabsDemo',
+          name: 'TabsDemo',
+          component: () => import('./components/TabsDemo.vue')
         },
       ]
     }
