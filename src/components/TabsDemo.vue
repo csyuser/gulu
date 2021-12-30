@@ -4,6 +4,7 @@
     <Tabs>
       <TabPane title="标题1" name="first">内容1</TabPane>
       <TabPane title="标题2" name="second">内容2</TabPane>
+      <TabPane title="标题3" name="second">内容3</TabPane>
     </Tabs>
   </section>
 </template>
