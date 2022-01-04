@@ -1,7 +1,8 @@
 <template>
   <div class="pipi-tabs">
     <div class="pipi-tabs-nav">
-      <div class="pipi-tabs-nav-item pipi-selected" v-for="item in navs" :key="item.name">{{ item.title }}</div>
+      <div class="pipi-tabs-nav-item" v-for="item in navs" :key="item.name" :class="{'pipi-selected':item.name === activeName}"
+           @click="select(item.name)">{{ item.title }}</div>
     </div>
     <div class="pipi-tabs-content">
       <component :is="defaultSlots[0]"></component>
@@ -17,6 +18,9 @@ import TabPane from './TabPane.vue';
 
 export default {
   name: 'Tabs',
+  props:{
+    activeName:{type:String}
+  },
   setup(props, context) {
     const defaultSlots = context.slots.default();
     console.log(defaultSlots);
@@ -28,7 +32,10 @@ export default {
     const navs = defaultSlots.map((item) => {
       return item.props;
     });
-    return {defaultSlots, navs};
+    const select = (name:String)=>{
+      context.emit('update:activeName',name)
+    }
+    return {defaultSlots, navs,select};
   }
 };
 </script>
