@@ -3,8 +3,8 @@
     <p>基本用法：</p>
     <Tabs v-model:active-name="activeName">
       <TabPane title="标题1" name="first">内容1</TabPane>
-      <TabPane title="标题2" name="second">内容2</TabPane>
-      <TabPane title="标题3" name="third">内容3</TabPane>
+      <TabPane title="标题2222" name="second">内容2222</TabPane>
+      <TabPane title="标题333333333" name="third">内容333333333</TabPane>
     </Tabs>
   </section>
 </template>
