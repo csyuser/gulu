@@ -6,15 +6,13 @@
       <div class="pipi-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="pipi-tabs-content">
-      <component :is="defaultSlots[0]"></component>
-      <component :is="defaultSlots[1]"></component>
-      <component :is="defaultSlots[2]"></component>
+      <component :is="current" :key="current.props.name"></component>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {ref,onMounted,onUpdated} from 'vue';
+import {ref,onMounted,onUpdated,computed} from 'vue';
 import TabPane from './TabPane.vue';
 
 export default {
@@ -60,8 +58,12 @@ export default {
     const select = (name:String)=>{
       context.emit('update:activeName',name)
     }
-
-    return {defaultSlots, navs,setItemRef,indicator,navContainer,select};
+    const current = computed(()=>{
+      return defaultSlots.filter((item)=>{
+       return  item.props.name === props.activeName
+      })[0]
+    })
+    return {defaultSlots, navs,setItemRef,indicator,navContainer,select,current};
   }
 };
 </script>
