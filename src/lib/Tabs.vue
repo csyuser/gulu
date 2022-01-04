@@ -1,6 +1,6 @@
 <template>
   <div class="pipi-tabs">
-    <div class="pipi-tabs-nav">
+    <div class="pipi-tabs-nav" ref="navContainer">
       <div class="pipi-tabs-nav-item" v-for="item in navs" :key="item.name" :class="{'pipi-selected':item.name === activeName}"
           :ref="setItemRef" @click="select(item.name)">{{ item.title }}</div>
       <div class="pipi-tabs-nav-indicator" ref="indicator"></div>
@@ -25,33 +25,43 @@ export default {
   setup(props, context) {
     const selectedNav = ref<HTMLDivElement>(null)
     const indicator = ref<HTMLDivElement>(null)
+    const navContainer = ref<HTMLDivElement>(null)
 
+//设置选中标题nav的宽以及位置
     const x = ()=>{
       let {width} = selectedNav.value.getBoundingClientRect()
+      let {left:left1} = navContainer.value.getBoundingClientRect()
+      let {left:left2} = selectedNav.value.getBoundingClientRect()
+      let xxx = left2 - left1
       indicator.value.style.width = `${width}px`
+      indicator.value.style.left = `${xxx}px`
     }
 
     onMounted(x)
     onUpdated(x)
+//获取tabs组件的默认slot，并判断只能是TabPane标签
     const defaultSlots = context.slots.default();
     defaultSlots.forEach((item) => {
       if (item.type !== TabPane) {
         throw new Error('Tabs标签里面只能是TabPane标签');
       }
     });
+//从默认slot里面获取slot的props，用以渲染标题
     const navs = defaultSlots.map((item) => {
       return item.props;
     });
+//设置navItem的ref，找到选中的navItem
     const setItemRef = (el)=>{
         if(el?.classList.contains('pipi-selected')){
           selectedNav.value = el;
         }
     }
+//标题nav的select事件
     const select = (name:String)=>{
       context.emit('update:activeName',name)
     }
 
-    return {defaultSlots, navs,setItemRef,indicator,select};
+    return {defaultSlots, navs,setItemRef,indicator,navContainer,select};
   }
 };
 </script>
@@ -77,10 +87,11 @@ export default {
     }
     &-indicator{
       position: absolute;
-      left: 0;
+      //left: 0;
       bottom: -2px;
       height: 2px;
       background: $blue;
+      transition: all 250ms;
     }
   }
   &-content{
