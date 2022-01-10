@@ -63,7 +63,7 @@ export default {
   display: flex;
   > aside {
     flex-shrink: 0;
-    box-shadow: 1px 0 3px rgba(0,0,0,0.1);
+    box-shadow: 1px 0 3px rgba(226, 135, 70,0.3);
   }
   > main {
     flex-grow: 1;
@@ -81,7 +81,7 @@ aside {
   height: 100%;
   z-index: 1;
   > h2 {
-    margin-bottom: 4px;
+    margin: 8px 0;
   }
   > ol {
     > li {

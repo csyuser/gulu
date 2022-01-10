@@ -2,35 +2,35 @@
   <TopNav></TopNav>
   <div class="banner">
     <h1>皮皮UI</h1>
-    <h2>一个快乐的 UI 框架</h2>
+    <h2>一个基于vue3.0的 UI 框架</h2>
     <p class="actions">
       <a href="https://github.com">GitHub</a>
       <router-link to="/doc">开始</router-link>
     </p>
   </div>
-  <ul class="features">
-    <li>
+  <div class="features">
+    <a href="https://v3.cn.vuejs.org/">
       <svg class="icon">
         <use xlink:href="#icon-vue"></use>
       </svg>
       <h3>基于 Vue 3</h3>
       <p>骄傲地使用了 Vue 3 Composition API</p>
-    </li>
-    <li>
+    </a>
+    <a href="https://www.tslang.cn/docs/home.html">
       <svg class="icon">
         <use xlink:href="#icon-ts"></use>
       </svg>
       <h3>基于 TypeScript </h3>
       <p>源代码采用 TypeScript 书写（非严格检查）</p>
-    </li>
-    <li>
+    </a>
+    <router-link to="/doc">
       <svg class="icon">
         <use xlink:href="#icon-light"></use>
       </svg>
       <h3>代码易读</h3>
       <p>每个组件的源代码都极其简洁</p>
-    </li>
-  </ul>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -64,6 +64,10 @@ export default {
       border-radius: 4px;
       padding: 8px 16px;
       color: #ffffff;
+      transition: all 250ms;
+      &:hover{
+        background: lighten(#ef9452,5%);
+      }
     }
   }
 }
@@ -83,7 +87,7 @@ export default {
     width: 1200px;
   }
 
-  > li {
+  > a {
     margin: 16px 0;
     display: grid;
     justify-content: start;

@@ -62,6 +62,9 @@ $textColor:#e28746;
       width: 32px;
       height: 32px;
       color: $textColor;
+      &:hover{
+        color: lighten($textColor,5%);
+      }
     }
   }
 
