@@ -41,6 +41,7 @@ $textColor:#e28746;
 
 .topNav {
   //background: $mainColor;
+  background: linear-gradient(150deg, rgba(246,236,213,1) 0%, rgba(252,202,156,1) 100%);
   display: flex;
   padding: 16px;
   position: fixed;
@@ -51,7 +52,7 @@ $textColor:#e28746;
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  //box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 1px 3px 0 rgba(226, 135, 70,0.3);
 
   > .logo {
     max-width: 6em;
