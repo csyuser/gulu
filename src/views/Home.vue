@@ -10,6 +10,23 @@
       </p>
     </div>
   </div>
+  <ul class="features">
+    <li>
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+    </li>
+    <li>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+    </li>
+    <li>
+      <svg class="icon">
+        <use xlink:href="#icon-light"></use>
+      </svg>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -25,26 +42,26 @@ export default {
 .home-wrapper{
   //background: rgb(240,218,211);
   background: linear-gradient(150deg, rgba(240,218,211,1) 0%, rgba(249,191,143,1) 100%);
-}
-
-.banner {
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #e28746;
-  line-height: 1.5;
-  > .actions{
-    padding: 8px 0;
-    a {
-      margin:0 8px;
-      background: #ef9452;
-      display: inline-block;
-      border-radius: 4px;
-      padding: 8px 16px;
-      color: #ffffff;
+  .banner {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #e28746;
+    line-height: 1.5;
+    > .actions{
+      padding: 8px 0;
+      a {
+        margin:0 8px;
+        background: #ef9452;
+        display: inline-block;
+        border-radius: 4px;
+        padding: 8px 16px;
+        color: #ffffff;
+      }
     }
   }
 }
+
 </style>

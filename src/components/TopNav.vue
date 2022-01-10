@@ -1,6 +1,10 @@
 <template>
   <div class="topNav">
-    <h3 class="logo" @click="$router.push('/')">logo</h3>
+    <h3 class="logo" @click="$router.push('/')">
+      <svg class="icon">
+        <use xlink:href="#icon-cloud"></use>
+      </svg>
+    </h3>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -33,6 +37,8 @@ export default {
 
 <style scoped lang='scss'>
 @import "src/assets/style/helper.scss";
+$textColor:#e28746;
+
 .topNav {
   //background: $mainColor;
   display: flex;
@@ -50,12 +56,19 @@ export default {
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    cursor: pointer;
+    > svg{
+      width: 32px;
+      height: 32px;
+      color: $textColor;
+    }
   }
 
   > .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+    color: #ef6909;
 
     > li {
       margin: 0 1em;
