@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="home-wrapper">
     <TopNav></TopNav>
     <div class="banner">
-      <h1>轱辘UI</h1>
-      <h2>一个厉害的 UI 框架</h2>
+      <h1>皮皮UI</h1>
+      <h2>一个快乐的 UI 框架</h2>
       <p class="actions">
         <a href="https://github.com">GitHub</a>
         <router-link to="/doc">开始</router-link>
@@ -22,6 +22,10 @@ export default {
 </script>
 <style scoped lang='scss'>
 @import "src/assets/style/helper.scss";
+.home-wrapper{
+  //background: rgb(240,218,211);
+  background: linear-gradient(150deg, rgba(240,218,211,1) 0%, rgba(249,191,143,1) 100%);
+}
 
 .banner {
   padding: 100px 0;
@@ -29,18 +33,16 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ffffff;
+  color: #e28746;
+  line-height: 1.5;
   > .actions{
     padding: 8px 0;
     a {
       margin:0 8px;
-      background: $mainColor;
+      background: #ef9452;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
-      padding: 0 16px;
+      border-radius: 4px;
+      padding: 8px 16px;
       color: #ffffff;
     }
   }

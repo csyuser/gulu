@@ -34,7 +34,7 @@ export default {
 <style scoped lang='scss'>
 @import "src/assets/style/helper.scss";
 .topNav {
-  background: $mainColor;
+  //background: $mainColor;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -45,7 +45,7 @@ export default {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+  //box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
 
   > .logo {
     max-width: 6em;
