@@ -9,7 +9,11 @@
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu"></span>
+    <span class="toggleAside" @click="toggleMenu" v-if="toggleMenuButtonVisible">
+      <svg class="icon">
+        <use xlink:href="#icon-toggleMenu"></use>
+      </svg>
+    </span>
   </div>
 </template>
 
@@ -18,6 +22,9 @@ import {inject,Ref} from 'vue'
 
 export default {
   name: 'TopNav',
+  props:{
+    toggleMenuButtonVisible:{type:Boolean,default:false}
+  },
   setup(){
     const menuVisible = inject < Ref < boolean >> ('menuVisible')
     const toggleMenu = ()=>{
@@ -80,15 +87,17 @@ $textColor:#e28746;
   }
 
   > .toggleAside {
-    width: 24px;
-    height: 24px;
-    background: $mainColor;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+    > svg{
+      width: 24px;
+      height: 24px;
+      color: $textColor;
+    }
   }
 
   @media (max-width: 500px) {
