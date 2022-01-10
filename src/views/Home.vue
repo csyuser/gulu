@@ -41,7 +41,9 @@ export default {
 @import "src/assets/style/helper.scss";
 .home-wrapper{
   //background: rgb(240,218,211);
-  background: linear-gradient(150deg, rgba(240,218,211,1) 0%, rgba(249,191,143,1) 100%);
+  //background: linear-gradient(150deg, rgba(240,218,211,1) 0%, rgba(249,191,143,1) 100%);
+  background: linear-gradient(150deg, rgba(246,236,213,1) 0%, rgba(254,192,138,1) 100%);;
+  clip-path: ellipse(80% 60% at 53% 40%);
   .banner {
     padding: 100px 0;
     display: flex;
