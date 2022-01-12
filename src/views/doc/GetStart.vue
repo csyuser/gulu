@@ -3,11 +3,9 @@
 </template>
 
 <script>
-import Markdown from '../../components/Markdown.vue'
 
 export default {
   name: 'GetStart',
-  components: {Markdown},
 }
 </script>
 
