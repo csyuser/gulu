@@ -1,6 +1,10 @@
 import {createWebHashHistory, createRouter} from 'vue-router';
 import Home from './views/Home.vue';
 import Doc from './views/Doc.vue';
+// @ts-ignore
+import { h } from 'vue';
+import Markdown from './components/Markdown.vue'
+
 
 export const router = createRouter({
   history: createWebHashHistory(),
@@ -11,15 +15,15 @@ export const router = createRouter({
         {
           path: 'intro',
           name: 'Intro',
-          component: () => import('./views/doc/Intro.vue')
+          component: h(Markdown, { path: `../markdown/intro.md`,key:'1'})
         },{
           path: 'get-start',
           name: 'GetStart',
-          component: () => import('./views/doc/GetStart.vue')
+          component: h(Markdown, { path: `../markdown/get-started.md`,key:'2'})
         },{
           path: 'install',
           name: 'Install',
-          component: () => import('./views/doc/Install.vue')
+          component: h(Markdown, { path: `../markdown/install.md`,key:'3'})
         }, {
           path: 'button-demo',
           name: 'ButtonDemo',
