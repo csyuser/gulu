@@ -9,6 +9,18 @@ export const router = createRouter({
     {
       path: '/Doc', component: Doc, children: [
         {
+          path: '/intro',
+          name: 'Intro',
+          component: () => import('./views/doc/Intro.vue')
+        },{
+          path: '/get-start',
+          name: 'GetStart',
+          component: () => import('./views/doc/GetStart.vue')
+        },{
+          path: '/install',
+          name: 'Install',
+          component: () => import('./views/doc/Install.vue')
+        }, {
           path: '/ButtonDemo',
           name: 'ButtonDemo',
           component: () => import('./components/ButtonDemo.vue')

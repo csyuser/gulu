@@ -6,6 +6,15 @@
         <h2>组件列表</h2>
         <ol>
           <li>
+            <router-link to="/intro">介绍</router-link>
+          </li>
+          <li>
+            <router-link to="/install">安装</router-link>
+          </li>
+          <li>
+            <router-link to="/get-start">开始使用</router-link>
+          </li>
+          <li>
             <router-link to="/SwitchDemo">Switch 组件</router-link>
           </li>
           <li>
