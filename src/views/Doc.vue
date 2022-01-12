@@ -42,6 +42,7 @@ export default {
 
 <style scoped lang='scss'>
 @import "src/assets/style/helper.scss";
+$textColor:#e28746;
 
 .layout {
   display: flex;
@@ -85,7 +86,25 @@ aside {
   }
   > ol {
     > li {
-      padding: 4px 0;
+      a{
+        display: block;
+        padding: 4px 0;
+        transition: all 250ms;
+      }
+      .router-link-active{
+        color:$textColor;
+        position: relative;
+        &:before{
+          position: absolute;
+          content: '';
+          display: block;
+          width: 3px;
+          height: 100%;
+          left: -16px;
+          top: 0;
+          background: $textColor;
+        }
+      }
     }
   }
 }
