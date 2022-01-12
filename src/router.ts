@@ -9,31 +9,31 @@ export const router = createRouter({
     {
       path: '/Doc', component: Doc, children: [
         {
-          path: '/intro',
+          path: 'intro',
           name: 'Intro',
           component: () => import('./views/doc/Intro.vue')
         },{
-          path: '/get-start',
+          path: 'get-start',
           name: 'GetStart',
           component: () => import('./views/doc/GetStart.vue')
         },{
-          path: '/install',
+          path: 'install',
           name: 'Install',
           component: () => import('./views/doc/Install.vue')
         }, {
-          path: '/ButtonDemo',
+          path: 'button-demo',
           name: 'ButtonDemo',
           component: () => import('./components/ButtonDemo.vue')
         },{
-          path: '/DialogDemo',
+          path: 'dialog-demo',
           name: 'DialogDemo',
           component: () => import('./components/DialogDemo.vue')
         },{
-          path: '/SwitchDemo',
+          path: 'switch-demo',
           name: 'SwitchDemo',
           component: () => import('./components/SwitchDemo.vue')
         },{
-          path: '/TabsDemo',
+          path: 'tabs-demo',
           name: 'TabsDemo',
           component: () => import('./components/TabsDemo.vue')
         },
