@@ -5,6 +5,8 @@ import Doc from './views/Doc.vue';
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue'
 
+const getMd = (fileName)=> h(Markdown, { path: `../markdown/${fileName}.md`,key:fileName})
+
 
 export const router = createRouter({
   history: createWebHashHistory(),
@@ -15,15 +17,15 @@ export const router = createRouter({
         {
           path: 'intro',
           name: 'Intro',
-          component: h(Markdown, { path: `../markdown/intro.md`,key:'1'})
+          component: getMd('intro')
         },{
           path: 'get-start',
           name: 'GetStart',
-          component: h(Markdown, { path: `../markdown/get-started.md`,key:'2'})
+          component: getMd('get-started')
         },{
           path: 'install',
           name: 'Install',
-          component: h(Markdown, { path: `../markdown/install.md`,key:'3'})
+          component: getMd('install')
         }, {
           path: 'button-demo',
           name: 'ButtonDemo',
