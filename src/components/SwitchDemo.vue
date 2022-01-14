@@ -1,10 +1,18 @@
 <template>
-  <DocDemo title="正常状态">
+<!--  <DocDemo title="常规用法">-->
+<!--    <template #example>-->
+<!--      <Switch v-model:value="value"></Switch>-->
+<!--    </template>-->
+<!--    <template #code>-->
+<!--      <Markdown path="../markdown/switch.md"></Markdown>-->
+<!--    </template>-->
+<!--  </DocDemo>-->
+  <DocDemo title="常规用法">
     <template #example>
-      <Switch v-model:value="value"></Switch>
+      <SwitchNormal></SwitchNormal>
     </template>
     <template #code>
-      <Markdown path="../markdown/switch.md"></Markdown>
+      <pre>{{SwitchNormal['__sourceCode']}}</pre>
     </template>
   </DocDemo>
   <DocDemo title="禁用状态">
@@ -24,15 +32,15 @@ import Switch from '../lib/Switch.vue'
 import {ref} from 'vue'
 import DocDemo from './DocDemo.vue'
 import Markdown from './Markdown.vue'
+import SwitchNormal from './switch-demo/SwitchNormal.vue'
 
 export default {
   name: 'SwitchDemo',
-  components: {Switch, DocDemo,Markdown},
+  components: {Switch, DocDemo,Markdown,SwitchNormal},
   setup() {
-    const value = ref(true)
     const value2 = ref(false)
     const value3 = ref(false)
-    return {value, value2, value3}
+    return {value2, value3,SwitchNormal}
   }
 }
 </script>
