@@ -35,12 +35,15 @@ button:focus{  //电脑端
 *{
   -webkit-tap-highlight-color: transparent;   //手机端
 }
-
+body{
+  color: #24292E;
+}
 .icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
 }
+
 
 
