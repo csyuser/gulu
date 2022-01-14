@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c09fefd2-b495-4745-ae6a-50bb188d10aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TopNav.vue" afterDir="false" />
+    <list default="true" id="c09fefd2-b495-4745-ae6a-50bb188d10aa" name="Default Changelist" comment="封装docDemo">
+      <change afterPath="$PROJECT_DIR$/src/markdown/switch.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DocDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DocDemo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SwitchDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SwitchDemo.vue" afterDir="false" />
+    </list>
+    <list id="b9178fc4-ad77-4f99-858c-aae91a5353be" name="ignore" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="25" changelist="b9178fc4-ad77-4f99-858c-aae91a5353be" />
+        <range start1="3" end1="5" start2="26" end2="33" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="6" end1="10" start2="34" end2="34" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="27" end1="27" start2="51" end2="77" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="34" end1="34" start2="84" end2="85" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="36" end1="36" start2="87" end2="93" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="43" end1="43" start2="100" end2="101" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="50" end1="50" start2="108" end2="109" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="57" end1="58" start2="116" end2="193" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="59" end1="63" start2="194" end2="198" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="64" end1="65" start2="199" end2="200" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="66" end1="67" start2="201" end2="489" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="72" end1="72" start2="494" end2="506" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="73" end1="75" start2="507" end2="533" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="77" end1="78" start2="535" end2="540" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="80" end1="82" start2="542" end2="544" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="84" end1="86" start2="546" end2="548" changelist="b9178fc4-ad77-4f99-858c-aae91a5353be" />
+        <range start1="88" end1="90" start2="550" end2="556" changelist="c09fefd2-b495-4745-ae6a-50bb188d10aa" />
+        <range start1="92" end1="94" start2="558" end2="560" changelist="b9178fc4-ad77-4f99-858c-aae91a5353be" />
+        <range start1="96" end1="97" start2="562" end2="567" changelist="b9178fc4-ad77-4f99-858c-aae91a5353be" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectId" id="1vGJJkfWGrXIIAAR91r7ifQIoiZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,8 +59,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="E:\Software\webstorm\WebStorm 2020.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -41,6 +75,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\csy\jirengu\gulu\src\views\doc" />
       <recent name="F:\csy\jirengu\gulu\src\views" />
     </key>
   </component>
@@ -48,6 +83,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c09fefd2-b495-4745-ae6a-50bb188d10aa" name="Default Changelist" comment="" />
+      <changelist id="b9178fc4-ad77-4f99-858c-aae91a5353be" name="ignore" comment="" />
       <created>1626182423270</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -55,39 +91,446 @@
       <workItem from="1626182424584" duration="3365000" />
       <workItem from="1626767726306" duration="3847000" />
       <workItem from="1626772393308" duration="2819000" />
-      <workItem from="1627295176757" duration="4342000" />
+      <workItem from="1627295176757" duration="4658000" />
+      <workItem from="1627549565535" duration="165000" />
+      <workItem from="1628037886422" duration="8006000" />
+      <workItem from="1628127405722" duration="2172000" />
+      <workItem from="1638757439305" duration="14383000" />
+      <workItem from="1639128672157" duration="1550000" />
+      <workItem from="1639356423963" duration="170000" />
+      <workItem from="1639731897549" duration="181000" />
+      <workItem from="1639982282578" duration="5122000" />
+      <workItem from="1640046675941" duration="2640000" />
+      <workItem from="1640139633602" duration="17528000" />
+      <workItem from="1640307213294" duration="1229000" />
+      <workItem from="1640565420678" duration="9420000" />
+      <workItem from="1640599666141" duration="29000" />
+      <workItem from="1640669388542" duration="4705000" />
+      <workItem from="1640756554205" duration="10225000" />
+      <workItem from="1640851638291" duration="6029000" />
+      <workItem from="1640910747045" duration="599000" />
+      <workItem from="1640911863318" duration="942000" />
+      <workItem from="1641258393466" duration="7000" />
+      <workItem from="1641275531449" duration="8598000" />
+      <workItem from="1641344380805" duration="2579000" />
+      <workItem from="1641447931300" duration="1732000" />
+      <workItem from="1641785238298" duration="11272000" />
+      <workItem from="1641947729846" duration="7609000" />
+      <workItem from="1641978372774" duration="3333000" />
+      <workItem from="1642034483789" duration="1509000" />
+      <workItem from="1642149611368" duration="3233000" />
     </task>
-    <task id="LOCAL-00001" summary="创建 doc文件，删除多余的文件">
-      <created>1627296171239</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00017" summary="Switch组件添加禁用功能">
+      <created>1639985887725</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1627296171239</updated>
+      <updated>1639985887725</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00018" summary="Switch组件添加禁用功能">
+      <created>1639985904757</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1639985904757</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Switch组件添加自定义背景色">
+      <created>1639986483118</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1639986483118</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Switch组件class名添加前缀pipi">
+      <created>1640140827919</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1640140827919</updated>
+    </task>
+    <task id="LOCAL-00021" summary="css 最小影响原则">
+      <created>1640141631299</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1640141631299</updated>
+    </task>
+    <task id="LOCAL-00022" summary="button组件基础样式">
+      <created>1640142648865</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1640142648865</updated>
+    </task>
+    <task id="LOCAL-00023" summary="button组件支持theme">
+      <created>1640143742329</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1640143742329</updated>
+    </task>
+    <task id="LOCAL-00024" summary="button组件支持click,mouseover,focus事件">
+      <created>1640143879735</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1640143879735</updated>
+    </task>
+    <task id="LOCAL-00025" summary="button组件支持size">
+      <created>1640151630402</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1640151630402</updated>
+    </task>
+    <task id="LOCAL-00026" summary="button组件支持level">
+      <created>1640155261095</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1640155261095</updated>
+    </task>
+    <task id="LOCAL-00027" summary="button组件支持文字和链接level">
+      <created>1640155912928</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1640155912928</updated>
+    </task>
+    <task id="LOCAL-00028" summary="button组件支持disabled">
+      <created>1640157177634</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1640157177634</updated>
+    </task>
+    <task id="LOCAL-00029" summary="button组件支持loading">
+      <created>1640158318903</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1640158318903</updated>
+    </task>
+    <task id="LOCAL-00030" summary="dialog组件初步样式ok">
+      <created>1640586848781</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1640586848781</updated>
+    </task>
+    <task id="LOCAL-00031" summary="visible无效">
+      <created>1640599682305</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1640599682305</updated>
+    </task>
+    <task id="LOCAL-00032" summary="dialog组件支持title外传">
+      <created>1640758589502</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1640758589502</updated>
+    </task>
+    <task id="LOCAL-00033" summary="dialog组件支持width和top外传">
+      <created>1640759860786</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1640759860786</updated>
+    </task>
+    <task id="LOCAL-00034" summary="嵌套的dialog 未完成">
+      <created>1640762556715</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1640762556715</updated>
+    </task>
+    <task id="LOCAL-00035" summary="一句话打开dialog">
+      <created>1640771274164</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1640771274164</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Dialog组件允许嵌套的dialog 但只能嵌套一层">
+      <created>1640771622249</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1640771622249</updated>
+    </task>
+    <task id="LOCAL-00037" summary="更改dialog示例样式">
+      <created>1640772039950</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1640772039950</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Tabs标签里面只能是TabPane标签">
+      <created>1640853378821</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1640853378821</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Tabs组件基本样式">
+      <created>1640857728689</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1640857728689</updated>
+    </task>
+    <task id="LOCAL-00040" summary="将主色调提出，新建public.scss">
+      <created>1640857984273</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1640857984273</updated>
+    </task>
+    <task id="LOCAL-00041" summary="tab 组件切换nav css">
+      <created>1641278429458</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1641278429458</updated>
+    </task>
+    <task id="LOCAL-00042" summary="tab 标题下划线宽度切换">
+      <created>1641279850442</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1641279850442</updated>
+    </task>
+    <task id="LOCAL-00043" summary="tab 设置选中标题nav的位置">
+      <created>1641281018121</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1641281018121</updated>
+    </task>
+    <task id="LOCAL-00044" summary="tab 组件内容切换完成">
+      <created>1641284731087</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1641284731087</updated>
+    </task>
+    <task id="LOCAL-00045" summary="tab 使用watchEffect">
+      <created>1641285350556</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1641285350556</updated>
+    </task>
+    <task id="LOCAL-00046" summary="完成首页渐变">
+      <created>1641797507075</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1641797507075</updated>
+    </task>
+    <task id="LOCAL-00047" summary="引入icon">
+      <created>1641798616456</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1641798616456</updated>
+    </task>
+    <task id="LOCAL-00048" summary="使用clip-path画曲线">
+      <created>1641799728271</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1641799728271</updated>
+    </task>
+    <task id="LOCAL-00049" summary="完成features &amp;&amp; topNav样式">
+      <created>1641802980164</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1641802980164</updated>
+    </task>
+    <task id="LOCAL-00050" summary="完成features &amp;&amp; topNav样式">
+      <created>1641803012162</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1641803012162</updated>
+    </task>
+    <task id="LOCAL-00051" summary="完善首页的点击跳转">
+      <created>1641804386311</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1641804386311</updated>
+    </task>
+    <task id="LOCAL-00052" summary="侧边栏切换按钮只在文档页时显示">
+      <created>1641804880743</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1641804880743</updated>
+    </task>
+    <task id="LOCAL-00053" summary="选中路由高亮">
+      <created>1641973490439</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1641973490439</updated>
+    </task>
+    <task id="LOCAL-00054" summary="引入介绍，安装，开始页面">
+      <created>1641974932863</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1641974932863</updated>
+    </task>
+    <task id="LOCAL-00055" summary="引入markDown样式">
+      <created>1641975694171</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1641975694171</updated>
+    </task>
+    <task id="LOCAL-00056" summary="支持md">
+      <created>1641978807032</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1641978807032</updated>
+    </task>
+    <task id="LOCAL-00057" summary="异步import，封装markdown组件">
+      <created>1641979841852</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1641979841852</updated>
+    </task>
+    <task id="LOCAL-00058" summary="异步import，封装markdown组件">
+      <created>1641979872992</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1641979872992</updated>
+    </task>
+    <task id="LOCAL-00059" summary="注册全局组件 Markdown">
+      <created>1641980704800</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1641980704800</updated>
+    </task>
+    <task id="LOCAL-00060" summary="h函数引入组件，删除doc文件">
+      <created>1641980796362</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1641980796362</updated>
+    </task>
+    <task id="LOCAL-00061" summary="封装函数，引用md文件">
+      <created>1641980961450</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1641980961450</updated>
+    </task>
+    <task id="LOCAL-00062" summary="更改文档介绍的一些细节">
+      <created>1642149912322</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1642149912322</updated>
+    </task>
+    <task id="LOCAL-00063" summary="文档默认页设置为介绍">
+      <created>1642149977795</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1642149977795</updated>
+    </task>
+    <task id="LOCAL-00064" summary="开始页路由更改">
+      <created>1642150074178</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1642150074178</updated>
+    </task>
+    <task id="LOCAL-00065" summary="封装docDemo">
+      <created>1642151882793</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1642151882793</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="创建 doc文件，删除多余的文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建 doc文件，删除多余的文件" />
+    <MESSAGE value="将主色调提出，新建public.scss" />
+    <MESSAGE value="tab 组件切换nav css" />
+    <MESSAGE value="tab 标题下划线宽度切换" />
+    <MESSAGE value="tab 设置选中标题nav的位置" />
+    <MESSAGE value="tab 组件内容切换完成" />
+    <MESSAGE value="tab 使用watchEffect" />
+    <MESSAGE value="完成首页渐变" />
+    <MESSAGE value="引入icon" />
+    <MESSAGE value="使用clip-path画曲线" />
+    <MESSAGE value="完成features &amp;&amp; topNav样式" />
+    <MESSAGE value="完善首页的点击跳转" />
+    <MESSAGE value="侧边栏切换按钮只在文档页时显示" />
+    <MESSAGE value="选中路由高亮" />
+    <MESSAGE value="引入介绍，安装，开始页面" />
+    <MESSAGE value="引入markDown样式" />
+    <MESSAGE value="支持md文档" />
+    <MESSAGE value="支持md" />
+    <MESSAGE value="异步import，封装markdown组件" />
+    <MESSAGE value="注册全局组件 Markdown" />
+    <MESSAGE value="h函数引入组件，删除doc文件" />
+    <MESSAGE value="封装函数，引用md文件" />
+    <MESSAGE value="更改文档介绍的一些细节" />
+    <MESSAGE value="文档默认页设置为介绍" />
+    <MESSAGE value="开始页路由更改" />
+    <MESSAGE value="封装docDemo" />
+    <option name="LAST_COMMIT_MESSAGE" value="封装docDemo" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1627296123406">
+    <state x="695" y="314" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1642151962854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1627296123406" />
-    <state x="560" y="65" key="CommitChangelistDialog2" timestamp="1627296170016">
+    <state x="695" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1642151962854" />
+    <state x="560" y="65" key="CommitChangelistDialog2" timestamp="1642151893859">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="65" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1642151893859" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1640855884539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="65" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1627296170016" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1626183433176">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/1920.481.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1626183433176" />
-    <state x="663" y="256" width="594" height="528" key="find.popup" timestamp="1626184073811">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1641258398661" />
+    <state x="806" y="432" key="VCS.ChangelistChooser" timestamp="1642151891736">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="806" y="432" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1642151891736" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1641981649284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="663" y="256" width="594" height="528" key="find.popup/1920.481.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1626184073811" />

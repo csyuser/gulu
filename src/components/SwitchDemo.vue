@@ -3,6 +3,9 @@
     <template #example>
       <Switch v-model:value="value"></Switch>
     </template>
+    <template #code>
+      <Markdown path="../markdown/switch.md"></Markdown>
+    </template>
   </DocDemo>
   <DocDemo title="禁用状态">
     <template #example>
@@ -20,10 +23,11 @@
 import Switch from '../lib/Switch.vue'
 import {ref} from 'vue'
 import DocDemo from './DocDemo.vue'
+import Markdown from './Markdown.vue'
 
 export default {
   name: 'SwitchDemo',
-  components: {Switch, DocDemo},
+  components: {Switch, DocDemo,Markdown},
   setup() {
     const value = ref(true)
     const value2 = ref(false)

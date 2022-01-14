@@ -3,38 +3,52 @@
     <!--    <div class="example">-->
     <header>
       <h3>{{ title }}</h3>
-      <div class="tools">
-        <svg class="icon">
-          <use xlink:href="#icon-code"></use>
-        </svg>
-      </div>
+      <ul class="tools">
+        <li @click="toggleCodeVisible">
+          <svg class="icon">
+            <use xlink:href="#icon-code"></use>
+          </svg>
+        </li>
+      </ul>
     </header>
     <main>
-      <div class="description">
+      <section class="description">
         <slot name="description"></slot>
-      </div>
-      <div class="example">
+      </section>
+      <section class="example">
         <slot name="example"></slot>
-      </div>
-      <div class="code">
+      </section>
+      <section class="code" v-if="codeVisible">
         <slot name="code"></slot>
-      </div>
+      </section>
     </main>
     <!--    </div>-->
   </section>
 </template>
 
 <script lang="ts">
+import {ref} from 'vue'
+
 export default {
   name: 'DocDemo',
-  props: {title: {type:String}}
-}
+  props: {title: {type: String}},
+  setup() {
+    const codeVisible = ref(false)
+    const toggleCodeVisible = () => {
+      codeVisible.value = !codeVisible.value
+    };
+    return {codeVisible,toggleCodeVisible};
+  }
+};
 </script>
 
 <style scoped lang='scss'>
 $borderColor: #dcdfe6;
 
 section {
+  margin-top: 16px;
+  border: 1px solid $borderColor;
+  border-radius: 8px;
   header {
     display: flex;
     align-items: center;
@@ -55,11 +69,11 @@ section {
   }
 
   > main {
-    padding: 16px;
+    padding: 0 16px 16px;
+    > section{
+      margin-top: 16px;
+      border: none;
+    }
   }
-
-  margin-top: 16px;
-  border: 1px solid $borderColor;
-  border-radius: 4px;
 }
 </style>
