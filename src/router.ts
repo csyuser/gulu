@@ -13,7 +13,7 @@ export const router = createRouter({
   routes: [
     {path: '/', component: Home},
     {
-      path: '/Doc', component: Doc, children: [
+      path: '/Doc', component: Doc, redirect:{name:'Intro'}, children: [
         {
           path: 'intro',
           name: 'Intro',
