@@ -19,8 +19,8 @@ export const router = createRouter({
           name: 'Intro',
           component: getMd('intro')
         },{
-          path: 'get-start',
-          name: 'GetStart',
+          path: 'get-started',
+          name: 'GetStarted',
           component: getMd('get-started')
         },{
           path: 'install',
