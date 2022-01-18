@@ -1,65 +1,44 @@
 <template>
-  <section>
-    <span>不同的theme：</span>
-    <Button @mouseover="mouseover" @click="click" @focus="focus">普通按钮</Button>
-    <Button theme="button">普通按钮</Button>
-    <Button theme="text">文字按钮</Button>
-    <Button theme="link">链接</Button>
-  </section>
-  <section>
-    <span>不同的size：</span>
-    <Button size="big">大号按钮</Button>
-    <Button>默认按钮</Button>
-    <Button size="medium">中号按钮</Button>
-    <Button size="small">小号按钮</Button>
-  </section>
-  <section>
-    <span>不同的level：</span>
-    <Button>普通按钮</Button>
-    <Button level="primary">主要按钮</Button>
-    <Button level="warn">警告按钮</Button>
-    <Button level="danger">危险按钮</Button>
-    <Button level="warn" theme="text">警告文字按钮</Button>
-    <Button level="danger" theme="link">危险链接按钮</Button>
-  </section>
-  <section>
-    <span>disabled：</span>
-    <Button disabled @click="click">普通按钮</Button>
-    <Button level="primary" disabled>主要按钮</Button>
-    <Button level="warn" disabled>警告按钮</Button>
-    <Button theme="text" disabled>文字按钮</Button>
-  </section>
-  <section>
-    <span>loading：</span>
-    <Button loading>加载中</Button>
-  </section>
+  <DocDemo :component="ButtonTheme">
+    <template #description>
+      <span>使用<code>button</code>，<code>text</code>，<code>link</code>定义不同类型的button。不传默认为：button</span>
+    </template>
+  </DocDemo>
+  <DocDemo :component="ButtonSize">
+    <template #description>
+      <span>使用<code>big</code>，<code>medium</code>，<code>small</code>定义不同size的button。不传默认为：medium</span>
+    </template>
+  </DocDemo>
+  <DocDemo :component="ButtonLevel">
+    <template #description>
+      <span>使用<code>primary</code>，<code>warn</code>，<code>danger</code>定义不同level的button。</span>
+    </template>
+  </DocDemo>
+  <DocDemo :component="ButtonDisabled">
+    <template #description>
+      <span>使用<code>disabled</code>定义不可用按钮。</span>
+    </template>
+  </DocDemo>
+  <DocDemo :component="ButtonLoading">
+    <template #description>
+      <span>使用<code>loading</code>定义加载中按钮。</span>
+    </template>
+  </DocDemo>
 </template>
 
-<script>
-import Button from '../lib/Button.vue'
+<script lang="ts">
+import DocDemo from './DocDemo.vue'
+import ButtonTheme from './button-demo/ButtonTheme.vue'
+import ButtonSize from './button-demo/ButtonSize.vue'
+import ButtonLevel from './button-demo/ButtonLevel.vue';
+import ButtonDisabled from './button-demo/BUttonDisabled.vue';
+import ButtonLoading from './button-demo/ButtonLoading.vue';
 
 export default {
   name: 'ButtonDemo',
-  components: {Button},
+  components: {DocDemo},
   setup(){
-    const mouseover = ()=>{
-      console.log('mouseover')
-    }
-    const click = ()=>{
-      console.log('click')
-    }
-    const focus = ()=>{
-      console.log('focus')
-    }
-    return {mouseover,click,focus}
+    return {focus,ButtonTheme,ButtonSize,ButtonLevel,ButtonDisabled,ButtonLoading}
   }
 }
 </script>
-
-<style scoped lang='scss'>
-section {
-  display: flex;
-  align-items: center;
-  margin-top: 16px;
-}
-</style>
