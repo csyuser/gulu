@@ -183,6 +183,7 @@ $grey:grey;
     color: $blue;
     &:hover,&:focus{
       color: lighten($blue,10%);
+      text-decoration: underline;
     }
     &.pipi-level-warn {
       color: $yellow;
