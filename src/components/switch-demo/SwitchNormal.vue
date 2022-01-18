@@ -10,14 +10,10 @@ import {ref} from 'vue'
 
 export default {
   name: 'SwitchNormal',
-  components: {Switch,},
+  components: {Switch},
   setup() {
     const bool = ref(true)
     return {bool}
   }
 }
 </script>
-
-<style scoped lang='scss'>
-
-</style>

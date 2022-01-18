@@ -1,8 +1,7 @@
 <template>
   <section>
-    <!--    <div class="example">-->
     <header>
-      <h3>{{ title }}</h3>
+      <h3>{{ component?.['__sourceCodeTitle'] }}</h3>
       <ul class="tools">
         <li @click="toggleCodeVisible">
           <svg class="icon">
@@ -16,28 +15,30 @@
         <slot name="description"></slot>
       </section>
       <section class="example">
-        <slot name="example"></slot>
+        <component :is="component"></component>
       </section>
       <section class="code" v-if="codeVisible">
-        <slot name="code"></slot>
+        <pre class="language-css" v-html="Prism.highlight(component['__sourceCode'], Prism.languages.html, 'html')"/>
       </section>
     </main>
-    <!--    </div>-->
   </section>
 </template>
 
 <script lang="ts">
-import {ref} from 'vue'
+import {ref} from 'vue';
+import 'prismjs';
+import 'prismjs/themes/prism-okaidia.css';
 
+const Prism = (window as any).Prism;
 export default {
   name: 'DocDemo',
-  props: {title: {type: String}},
+  props: {component: {type: Object}},
   setup() {
-    const codeVisible = ref(false)
+    const codeVisible = ref(false);
     const toggleCodeVisible = () => {
-      codeVisible.value = !codeVisible.value
+      codeVisible.value = !codeVisible.value;
     };
-    return {codeVisible,toggleCodeVisible};
+    return {codeVisible, toggleCodeVisible, Prism};
   }
 };
 </script>
@@ -49,6 +50,7 @@ section {
   margin-top: 16px;
   border: 1px solid $borderColor;
   border-radius: 8px;
+
   header {
     display: flex;
     align-items: center;
@@ -70,7 +72,8 @@ section {
 
   > main {
     padding: 0 16px 16px;
-    > section{
+
+    > section {
       margin-top: 16px;
       border: none;
     }
