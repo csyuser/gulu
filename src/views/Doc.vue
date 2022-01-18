@@ -97,7 +97,7 @@ aside {
     > li {
       a{
         display: block;
-        padding: 4px 0;
+        padding: 8px 0;
         transition: all 250ms;
       }
       .router-link-active{
