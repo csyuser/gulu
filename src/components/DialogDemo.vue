@@ -16,9 +16,9 @@
 
 <script lang="ts">
 import DocDemo from './DocDemo.vue';
-import DialogNormal from './switch-demo/DialogNormal.vue';
-import DialogNest from './switch-demo/DialogNest.vue';
-import DialogShortcut from './switch-demo/DialogShortcut.vue';
+import DialogNormal from './dialog-demo/DialogNormal.vue';
+import DialogNest from './dialog-demo/DialogNest.vue';
+import DialogShortcut from './dialog-demo/DialogShortcut.vue';
 
 export default {
   name: 'DialogDemo',
