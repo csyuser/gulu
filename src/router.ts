@@ -4,8 +4,11 @@ import Doc from './views/Doc.vue';
 // @ts-ignore
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue'
+import intro from './markdown/intro.md'
+import getStarted from './markdown/get-started.md'
+import install from './markdown/install.md'
 
-const getMd = (fileName)=> h(Markdown, { path: `../markdown/${fileName}.md`,key:fileName})
+const getMd = (md)=> h(Markdown, { content:md,key:md})
 
 
 export const router = createRouter({
@@ -17,15 +20,15 @@ export const router = createRouter({
         {
           path: 'intro',
           name: 'Intro',
-          component: getMd('intro')
+          component: getMd(intro)
         },{
           path: 'get-started',
           name: 'GetStarted',
-          component: getMd('get-started')
+          component: getMd(getStarted)
         },{
           path: 'install',
           name: 'Install',
-          component: getMd('install')
+          component: getMd(install)
         }, {
           path: 'button-demo',
           name: 'ButtonDemo',

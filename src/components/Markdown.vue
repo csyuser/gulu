@@ -3,20 +3,20 @@
 </template>
 
 <script>
-import {ref} from 'vue'
+// import {ref} from 'vue'
 
 export default {
   name: 'Intro',
-  props: {path: {type: String, required: true}},
-  setup(props){
-    const content = ref (null)
-    import(props.path).then(result => {
-      content.value = result.default
-    })
-    return {
-      content
-    }
-  },
+  props: {content: {type: String, required: true}},
+  // setup(props){
+  //   const content = ref (null)
+  //   import(props.path).then(result => {
+  //     content.value = result.default
+  //   })
+  //   return {
+  //     content
+  //   }
+  // },
 }
 </script>
 
